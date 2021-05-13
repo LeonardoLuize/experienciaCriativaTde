@@ -1,0 +1,218 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background: linear-gradient(62.58deg, #21D4FD -8.27%, #B721FF 104.38%);
+    overflow: hidden;
+}
+
+#container{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+#landingSection{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow: hidden;
+
+    scroll-snap-align: start;
+}
+
+.textBox{
+    margin: 20px;
+}
+
+.textBox p{
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    mix-blend-mode: overlay;
+}
+
+.imgArrow{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 50px;
+    mix-blend-mode: overlay;
+}
+
+.circle{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: #5BBFBF;
+    mix-blend-mode: overlay;
+    filter: blur(20px);
+    position: absolute;
+    top: 0px;
+    right: 300px;
+}
+
+.circle2{
+    width: 600px;
+    height: 600px;
+
+    border-radius: 50%;
+    background: #B66DFF;
+    mix-blend-mode: overlay;
+    filter: blur(15px);
+
+    position: absolute;
+    top: 300px;
+    right: 50px;
+}
+
+.circle3{
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+    background: #6683FF;
+    mix-blend-mode: overlay;
+    filter: blur(8px);
+
+    position: absolute;
+    top: -110px;
+    right: 0px;
+}
+
+
+.circle4{
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+    background: #B66DFF;
+    mix-blend-mode: overlay;
+    filter: blur(20px);
+
+    position: absolute;
+    top: 280px;
+    right: 0px;
+}
+
+.zIndex{
+    z-index: -1;
+}
+
+.projectsShow{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+
+    scroll-snap-align: start;
+    
+}
+
+.boxText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.boxText p:first-child{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    mix-blend-mode: overlay;
+}
+
+.pDesc{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: white;
+    mix-blend-mode: overlay;
+}
+
+.showImg{
+    margin-top: 50px;
+    border-radius: 5px;
+    width: 100%;
+    height: 300px;
+    background: #FCFCFC;
+    mix-blend-mode: normal;
+
+}
+
+.imgCavescape{
+    background-image: url('../public/cavescape.png');
+    background-size: cover;
+}
+
+
+.icon{
+    width: 40px;
+    mix-blend-mode: overlay;
+    transition: all .3s;
+    cursor: pointer;
+    margin-right: 10px;
+
+    transition: all .3s;
+
+}
+
+.sketch{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media(min-width: 768px){
+    .projectsShow{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        gap: 10px;
+
+        padding-top: 55px;
+    }
+
+    .showImg{
+        margin-top: 0px;
+    }
+
+}
+
+@media(min-width: 1024px){
+
+    .textBox p{
+        font-size: 40px;
+    }
+    
+    .imgArrow{
+        width: 60px;
+    }
+
+    .boxText p:first-child{
+        font-size: 40px;
+    }
+    
+    .pDesc{
+        font-size: 25px;
+    }
+    
+    .showImg{
+        height: 100%;
+    }
+
+    .icon{
+        width: 50px;
+    }
+}

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="./scripts/processing.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Luize | Experiência Criativa</title>
+</head>
+<body>
+    <div id="container">
+
+        <div id="landingSection">
+            <div class="textBox">
+                <p>Projetos</p>
+                <p>Experiência</p>
+                <p>Criativa</p>
+            </div>
+
+            <img class="imgArrow" src="./public/seta.svg">
+
+            <div class="circle zIndex"></div>
+            <div class="circle2 zIndex"></div>
+            <div class="circle3 zIndex"></div>
+            <div class="circle4 zIndex"></div>
+        </div>
+
+        <div class="projectsShow">
+            <div class="boxText">
+                <div>
+                    <p>Cavescape</p>
+                    <p class="pDesc">
+                        Cavescape é um jogo do estilo plataforma, 
+                        inspirado em jogos do gênero metroidvania,
+                        feito inteiramente na ferramenta Construct 3. 
+                        Cavescape contém uma história que avança 
+                        de acordo com o jogador e entrega um mundo 
+                        totalmente novo e imersivo.
+                    </p>   
+                </div>
+                <div>
+                    <a target="_new" href="https://github.com/LeonardoLuize/cavescape-final">
+                        <img class="icon" src="./public/github.svg">
+                    </a>
+
+                    <a target="_new" href="https://cavescape-final-git-main-leonardoluize.vercel.app/">
+                        <img class="icon" src="./public/web.svg">
+                    </a>
+                </div>
+            </div>
+
+            <div class="showImg imgCavescape"></div>
+        </div>
+
+        <div class="projectsShow">
+            <div class="boxText">
+                <div>
+                    <p>Criação de shapes em Processing 3</p>
+                    <p class="pDesc">
+                        Utilização da ferramenta processing para
+                        criação de programas multimídia e artes digitais.
+                    </p>   
+                </div>
+
+                <div>
+                    <a target="_new" href="https://github.com/LeonardoLuize/cavescape-final">
+                        <img class="icon" src="./public/github.svg">
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="showImg">
+                    
+                    <script type="text/processing">
+                        static final int NUM_LINES = 15;
+                        float t;
+
+                        void setup(){
+                        size(500, 500);
+                        }
+
+                        void draw(){
+                        background(0, 0);
+                        stroke(#21D4FD);
+                        strokeWeight(5);
+                        
+                        translate(width/2, height/2);
+                        
+                        for (int i = 0; i < NUM_LINES; i++){
+                            line(x1(t+i), y1(t+i), x2(t+i), y2(t+i));
+                        }
+                        
+                        
+                        t += 0.5;
+                        }
+
+                        float x1(float t) {
+                        return sin(t/10)*100 + cos(t / 20) * 200;
+                        }
+
+                        float y1(float t) {
+                        return cos(t/10)*100 + sin(t/27) * 150;
+                        }
+
+                        float x2(float t) {
+                        return sin(t/40)*50 + cos(t / 20) * 100;
+                        }
+
+                        float y2(float t) {
+                        return cos(t/10)*100 + cos(t/27) * 150;
+                        }
+                    </script> 
+                
+                    <canvas class="sketch" ></canvas>
+
+                </div>
+            </div>
+
+            
+
+            
+
+        </div>
+
+        <div class="projectsShow">
+            <div class="boxText">
+                <div>
+                    <p> </p>
+                </div>
+
+                <div>
+                    <a target="_new" href="https://github.com/LeonardoLuize/cavescape-final">
+                        <img class="icon" src="./public/github.svg">
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="showImg">
+                    
+                    <script type="text/processing">
+                        
+                        static final int NUM_LINES = 15;
+                        float t;
+
+                        void setup(){
+                        background(20);
+                        size(500, 500);
+                        }
+
+                        void draw(){
+                        background(0,0);
+                        noStroke();
+                        fill(255);
+                        translate(width/2, height/2);
+                        
+                        
+                        for (int i = 0; i < NUM_LINES; i++){
+                            
+                            
+                            
+                            
+                            ellipse(-sin(t/13)*150 + -cos(t / 27) * 200, -cos(t/13)*142 + -cos(t / 12) * 182, 10, 10);
+                            ellipse(-cos(t/16)*150 + -sin(t / 18) * 200, -sin(t/10)*120 + -cos(t / 16) * 156, 7, 7);
+                            ellipse(-sin(t/7)*150 + -cos(t / 30) * 200, -cos(t/29)*133 + -cos(t / 19) * 263, 6, 6);
+                            ellipse(-cos(t/21)*150 + -sin(t / 12) * 200, -sin(t/9)*121 + -sin(t / 13) * 168, 12, 12);
+                            
+                            fill(#33C0FD);
+                            ellipse(-sin(t/13)*150 + -cos(t / 26) * 200, -cos(t/31)*150 + -cos(t / 19) * 173, 10, 10);
+                            ellipse(-cos(t/13)*150 + -sin(t / 23) * 200, -sin(t/11)*137 + -cos(t / 23) * 173, 7, 7);
+                            ellipse(-sin(t/13)*150 + -cos(t / 21) * 200, -cos(t/22)*127 + -sin(t / 40) * 265, 8, 8);
+                            ellipse(-cos(t/13)*150 + -sin(t / 67) * 200, -sin(t/16)*180 + -cos(t / 11) * 136, 12, 12);
+                            
+                            ellipse(-sin(t/13)*150 + -cos(t / 12) * 200, -cos(t/34)*173 + -cos(t / 39) * 165, 10, 10);
+                            ellipse(-cos(t/13)*150 + -sin(t / 33) * 200, -sin(t/32)*135 + -sin(t / 13) * 192, 7, 7);
+                            ellipse(-sin(t/13)*150 + -cos(t / 42) * 200, -cos(t/26)*176 + -cos(t / 7) * 162, 9, 9);
+                            ellipse(-cos(t/13)*150 + -sin(t / 21) * 200, -sin(t/37)*136 + -cos(t / 23) * 252, 12, 12);
+                            
+                            
+                            
+                        
+                            
+                        }
+                        
+                        
+                        t += 0.5;
+                        }
+
+                        float x1(float t) {
+                        return sin(t/10)*100 + cos(t / 20) * 200;
+                        }
+
+                        float y1(float t) {
+                        return cos(t/10)*100 + sin(t/27) * 150;
+                        }
+
+                        float x2(float t) {
+                        return sin(t/40)*50 + cos(t / 20) * 100;
+                        }
+
+                        float y2(float t) {
+                        return cos(t/10)*100 + cos(t/27) * 150;
+                        }
+
+                        float x3(float t) {
+                        return cos(t/13)*101 + sin(t / 15) * 200;
+                        }
+
+                        float y3(float t) {
+                        return sin(t/11)*113 + sin(t/27) * 150;
+                        }
+
+                        float x4(float t) {
+                        return sin(t/33)*105 + sin(t / 10) * 50;
+                        }
+
+                        float y4(float t) {
+                        return sin(t/15)*100 + cos(t/27) * 150;
+                        }
+                    </script> 
+                
+                    <canvas class="sketch" ></canvas>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<!-- <script type="text/processing">
+                static final int NUM_LINES = 1;
+                float t;
+                
+                void setup(){
+                background(20);
+                size(600, 800);
+                }
+                
+                void draw(){
+                background(#FCFCFC);
+                noStroke();
+                fill(255);
+                translate(width/2, height/2);
+                
+                for (int i = 0; i < NUM_LINES; i++){
+                    
+                    fill(#6F77FE);
+                    ellipse(x1(t+i), y1(t+i), 10, 10);
+                    ellipse(x2(t+i), y1(t+i), 7, 7);
+                    ellipse(x2(t+i), x1(t+i), 6, 6);
+                    ellipse(y2(t+i), y1(t+i), 12, 12);
+                    
+                    fill(#A23AFC);
+                    ellipse(x3(t+i), y4(t+i), 10, 10);
+                    ellipse(y3(t+i), y2(t+i), 7, 7);
+                    ellipse(y1(t+i), x3(t+i), 8, 8);
+                    ellipse(x4(t+i), y3(t+i), 12, 12);
+                    
+                    ellipse(y4(t+i), y4(t+i), 10, 10);
+                    ellipse(x3(t+i), y2(t+i), 7, 7);
+                    ellipse(y1(t+i), x4(t+i), 9, 9);
+                    ellipse(x4(t+i), y4(t+i), 12, 12);
+                    
+                    
+                    fill(#33C0FD);
+                    ellipse(sin(t/13)*150 + cos(t / 27) * 200, cos(t/13)*142 + cos(t / 12) * 182, 10, 10);
+                    ellipse(cos(t/16)*150 + sin(t / 18) * 200, sin(t/10)*120 + cos(t / 16) * 156, 7, 7);
+                    ellipse(sin(t/7)*150 + cos(t / 30) * 200, cos(t/29)*133 + cos(t / 19) * 263, 6, 6);
+                    ellipse(cos(t/21)*150 + sin(t / 12) * 200, sin(t/9)*121 + sin(t / 13) * 168, 12, 12);
+                    
+                    ellipse(sin(t/13)*150 + cos(t / 26) * 200, cos(t/31)*150 + cos(t / 19) * 173, 10, 10);
+                    ellipse(cos(t/13)*150 + sin(t / 23) * 200, sin(t/11)*137 + cos(t / 23) * 173, 7, 7);
+                    ellipse(sin(t/13)*150 + cos(t / 21) * 200, cos(t/22)*127 + sin(t / 40) * 265, 8, 8);
+                    ellipse(cos(t/13)*150 + sin(t / 67) * 200, sin(t/16)*180 + cos(t / 11) * 136, 12, 12);
+                    
+                    fill(#B029FE);
+                    ellipse(sin(t/13)*150 + cos(t / 12) * 200, cos(t/34)*173 + cos(t / 39) * 165, 10, 10);
+                    ellipse(cos(t/13)*150 + sin(t / 33) * 200, sin(t/32)*135 + sin(t / 13) * 192, 7, 7);
+                    ellipse(sin(t/13)*150 + cos(t / 42) * 200, cos(t/26)*176 + cos(t / 7) * 162, 9, 9);
+                    ellipse(cos(t/13)*150 + sin(t / 21) * 200, sin(t/37)*136 + cos(t / 23) * 252, 12, 12);
+                    
+                    
+                    ellipse(-sin(t/13)*150 + -cos(t / 27) * 200, -cos(t/13)*142 + -cos(t / 12) * 182, 10, 10);
+                    ellipse(-cos(t/16)*150 + -sin(t / 18) * 200, -sin(t/10)*120 + -cos(t / 16) * 156, 7, 7);
+                    ellipse(-sin(t/7)*150 + -cos(t / 30) * 200, -cos(t/29)*133 + -cos(t / 19) * 263, 6, 6);
+                    ellipse(-cos(t/21)*150 + -sin(t / 12) * 200, -sin(t/9)*121 + -sin(t / 13) * 168, 12, 12);
+                    
+                    fill(#33C0FD);
+                    ellipse(-sin(t/13)*150 + -cos(t / 26) * 200, -cos(t/31)*150 + -cos(t / 19) * 173, 10, 10);
+                    ellipse(-cos(t/13)*150 + -sin(t / 23) * 200, -sin(t/11)*137 + -cos(t / 23) * 173, 7, 7);
+                    ellipse(-sin(t/13)*150 + -cos(t / 21) * 200, -cos(t/22)*127 + -sin(t / 40) * 265, 8, 8);
+                    ellipse(-cos(t/13)*150 + -sin(t / 67) * 200, -sin(t/16)*180 + -cos(t / 11) * 136, 12, 12);
+                    
+                    ellipse(-sin(t/13)*150 + -cos(t / 12) * 200, -cos(t/34)*173 + -cos(t / 39) * 165, 10, 10);
+                    ellipse(-cos(t/13)*150 + -sin(t / 33) * 200, -sin(t/32)*135 + -sin(t / 13) * 192, 7, 7);
+                    ellipse(-sin(t/13)*150 + -cos(t / 42) * 200, -cos(t/26)*176 + -cos(t / 7) * 162, 9, 9);
+                    ellipse(-cos(t/13)*150 + -sin(t / 21) * 200, -sin(t/37)*136 + -cos(t / 23) * 252, 12, 12);
+                    
+                    
+                    
+                    ellipse(-sin(t/13)*150 + -cos(t / 27) * 200 + sin(t/23) * 300 - 200, -cos(t/13)*142 + -cos(t / 12) * 182 + sin(t/7) * 90, 10, 10);
+                    ellipse(-cos(t/16)*150 + -sin(t / 18) * 200 + cos(t/18) * 13 * 10 * 7 - 200,-sin(t/13)*150 + -cos(t / 27) * 200 + sin(t/23) * 300 - 200, 7, 7);
+                    ellipse(-sin(t/7)*150 + -cos(t / 30) * 200 + -sin(t/51) * 250 -100,sin(t/19) * 102 - 200 - cos(t/29)*133 + -cos(t / 19) * 263, 6, 6);
+                    ellipse(-cos(t/21)*150 + -sin(t / 12) * 200 + tan(t/10) * 100, -sin(t/9)*121 + -sin(t / 13) * 168, 12, 12);
+                    
+                    fill(#B029FE);
+                    ellipse(sin(t/19) * 102 - 200 - cos(t/29)*133 + -cos(t / 19) * 263, -cos(t/21)*150 + -sin(t / 12) * 200 + sin(t/10) * 100, 10, 10);
+                    ellipse(-cos(t/13)*150 + -sin(t / 27) * 200 + sin(t/23) * 300 - 200, -sin(t/13)*142 + -cos(t / 12) * 182 + sin(t/7) * 90, 10, 10);
+                    ellipse(-sin(t/16)*150 + -cos(t / 18) * 200 + cos(t/18) * 13 * 10 * 7 - 200,-cos(t/13)*150 + -sin(t / 27) * 200 + -sin(t/23) * 300 - 200, 7, 7);
+                    ellipse(-cos(t/7)*150 + -cos(t / 30) * 200 + -cos(t/51) * 250 -100,cos(t/19) * 102 - 200 - sin(t/29)*133 + -cos(t / 19) * 263, 6, 6);
+                    ellipse(-sin(t/21)*150 + -sin(t / 12) * 200 + cos(t/10) * 100, -sin(t/9)*121 + -cos(t / 13) * 168, 12, 12);
+                    
+                    ellipse(sin(t/19) * 102 - 200 - cos(t/29)*133 + -cos(t / 19) * 263 - 500, -cos(t/21)*150 + -sin(t / 12) * 200 + sin(t/10) * 100+ 50, 10, 10);
+                    ellipse(-cos(t/13)*150 + -sin(t / 27) * 200 + sin(t/23) * 300 - 200  - 500, -sin(t/13)*142 + -cos(t / 12) * 182 + sin(t/7) * 90+ 50, 10, 10);
+                    ellipse(-sin(t/16)*150 + -cos(t / 18) * 200 + cos(t/18) * 13 * 10 * 7 - 200  - 500,-cos(t/13)*150 + -sin(t / 27) * 200 + -sin(t/23) * 300 - 200+ 50, 7, 7);
+                    ellipse(-cos(t/7)*150 + -cos(t / 30) * 200 + -cos(t/51) * 250 -100  - 500,cos(t/19) * 102 - 200 - sin(t/29)*133 + -cos(t / 19) * 263+ 50, 6, 6);
+                    ellipse(-sin(t/21)*150 + -sin(t / 12) * 200 + cos(t/10) * 100  - 500, -sin(t/9)*121 + -cos(t / 13) * 168 + 50, 12, 12);
+                    
+                    
+                    ellipse(sin(t/13)*150 + cos(t / 27) * 200 - 500, cos(t/13)*142 + cos(t / 12) * 182, 10, 10);
+                    ellipse(cos(t/16)*150 + sin(t / 18) * 200 - 500, sin(t/10)*120 + cos(t / 16) * 156, 7, 7);
+                    ellipse(sin(t/7)*150 + cos(t / 30) * 200 - 500, cos(t/29)*133 + cos(t / 19) * 263, 6, 6);
+                    ellipse(cos(t/21)*150 + sin(t / 12) * 200 - 500, sin(t/9)*121 + sin(t / 13) * 168, 12, 12);
+                    
+                    fill(#A23AFC);
+                    ellipse(sin(t/13)*150 + cos(t / 26) * 200 - 500, cos(t/31)*150 + cos(t / 19) * 173, 10, 10);
+                    ellipse(cos(t/13)*150 + sin(t / 23) * 200 - 500, sin(t/11)*137 + cos(t / 23) * 173, 7, 7);
+                    ellipse(sin(t/13)*150 + cos(t / 21) * 200 - 500, cos(t/22)*127 + sin(t / 40) * 265, 8, 8);
+                    ellipse(cos(t/13)*150 + sin(t / 67) * 200 - 500, sin(t/16)*180 + cos(t / 11) * 136, 12, 12);
+                    
+                    fill(#21D4FD);
+                    ellipse(sin(t/13)*150 + cos(t / 12) * 200 - 500, cos(t/34)*173 + cos(t / 39) * 165, 10, 10);
+                    ellipse(cos(t/13)*150 + sin(t / 33) * 200 - 500, sin(t/32)*135 + sin(t / 13) * 192, 7, 7);
+                    ellipse(sin(t/13)*150 + cos(t / 42) * 200 - 500, cos(t/26)*176 + cos(t / 7) * 162, 9, 9);
+                    ellipse(cos(t/13)*150 + sin(t / 21) * 200 - 500, sin(t/37)*136 + cos(t / 23) * 252, 12, 12);
+                    
+                    ellipse(sin(t/13)*150 + cos(t / 27) * 200 + 500, cos(t/13)*142 + cos(t / 12) * 182, 10, 10);
+                    ellipse(cos(t/16)*150 + sin(t / 18) * 200 + 500, sin(t/10)*120 + cos(t / 16) * 156, 7, 7);
+                    ellipse(sin(t/7)*150 + cos(t / 30) * 200 + 500, cos(t/29)*133 + cos(t / 19) * 263, 6, 6);
+                    ellipse(cos(t/21)*150 + sin(t / 12) * 200 + 500, sin(t/9)*121 + sin(t / 13) * 168, 12, 12);
+                    
+                    ellipse(sin(t/13)*150 + cos(t / 26) * 200 + 500, cos(t/31)*150 + cos(t / 19) * 173, 10, 10);
+                    ellipse(cos(t/13)*150 + sin(t / 23) * 200 + 500, sin(t/11)*137 + cos(t / 23) * 173, 7, 7);
+                    ellipse(sin(t/13)*150 + cos(t / 21) * 200 + 500, cos(t/22)*127 + sin(t / 40) * 265, 8, 8);
+                    ellipse(cos(t/13)*150 + sin(t / 67) * 200 + 500, sin(t/16)*180 + cos(t / 11) * 136, 12, 12);
+                    
+                    ellipse(sin(t/13)*150 + cos(t / 12) * 200 + 500, cos(t/34)*173 + cos(t / 39) * 165, 10, 10);
+                    ellipse(cos(t/13)*150 + sin(t / 33) * 200 + 500, sin(t/32)*135 + sin(t / 13) * 192, 7, 7);
+                    ellipse(sin(t/13)*150 + cos(t / 42) * 200 + 500, cos(t/26)*176 + cos(t / 7) * 162, 9, 9);
+                    ellipse(cos(t/13)*150 + sin(t / 21) * 200 + 500, sin(t/37)*136 + cos(t / 23) * 252, 12, 12);
+                    
+                }
+                
+                
+                t += 0.5;
+                }
+                
+                float x1(float t) {
+                return sin(t/10)*100 + cos(t / 20) * 200;
+                }
+                
+                float y1(float t) {
+                return cos(t/10)*100 + sin(t/27) * 150;
+                }
+                
+                float x2(float t) {
+                return sin(t/40)*50 + cos(t / 20) * 100;
+                }
+                
+                float y2(float t) {
+                return cos(t/10)*100 + cos(t/27) * 150;
+                }
+                
+                float x3(float t) {
+                return cos(t/13)*101 + sin(t / 15) * 200;
+                }
+                
+                float y3(float t) {
+                return sin(t/11)*113 + sin(t/27) * 150;
+                }
+                
+                float x4(float t) {
+                return sin(t/33)*105 + sin(t / 10) * 50;
+                }
+                
+                float y4(float t) {
+                return sin(t/15)*100 + cos(t/27) * 150;
+                }
+            </script> -->
+        
+        <!-- <canvas id="sketch" ></canvas> -->
+        
