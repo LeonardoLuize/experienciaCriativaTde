@@ -3,11 +3,14 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
     background: linear-gradient(62.58deg, #21D4FD -8.27%, #B721FF 104.38%);
     overflow: hidden;
+
+    
 }
 
 #container{
@@ -15,6 +18,7 @@ body{
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+
 }
 
 #landingSection{
@@ -93,13 +97,25 @@ body{
     height: 300px;
 
     border-radius: 50%;
-    background: #B66DFF;
+    background: #66D8D8;
     mix-blend-mode: overlay;
     filter: blur(20px);
 
     position: absolute;
     top: 280px;
     right: 0px;
+}
+
+.circle5{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: #B66DFF;
+    mix-blend-mode: overlay;
+    filter: blur(20px);
+    position: absolute;
+    top: 600px;
+    right: 500px;
 }
 
 .zIndex{
@@ -148,7 +164,7 @@ body{
     height: 300px;
     background: #FCFCFC;
     mix-blend-mode: normal;
-
+    transition: all .3s;
 }
 
 .imgCavescape{
@@ -168,10 +184,69 @@ body{
 
 }
 
+footer{
+    display: flex;
+    justify-content: space-between;
+
+    
+    background: #969696;
+    mix-blend-mode: overlay;
+    scroll-snap-align: start;
+}
+
+footer div:first-child{
+    padding: 20px;
+}
+
+footer p{
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    mix-blend-mode: overlay;
+}
+
+footer div:last-child{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.iconFooter{
+    width: 40px;
+    mix-blend-mode: overlay;
+    transition: all .3s;
+    cursor: pointer;
+    margin-right: 10px;
+
+    transition: all .3s;
+}
+
 .sketch{
     width: 100%;
     height: 100%;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 50px;
+    border-radius: 20px;
+    }
+     
+    /* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
+    ::-webkit-scrollbar-track {
+    background: #5a5a5a3b;
+    }
+     
+    /* aqui é a alça da barra, que demonstra a altura que você está na página
+    estou colocando uma cor azul clara nela*/
+    ::-webkit-scrollbar-thumb {
+    background: #cf66ff;
+    mix-blend-mode: overlay;
+    border-radius: 20px;
+    }
 
 
 @media(min-width: 768px){
